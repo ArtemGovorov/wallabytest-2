@@ -8,6 +8,8 @@ module.exports = function(wallaby) {
       'elements/**/*.js?(x)',
       'localization/**/*.js?(x)',
       'pages/**/*.js?(x)',
+      'utils/**/*.js?(x)',
+      '!**/*.test.js?(x)'
     ],
 
     tests: ['**/*.test.js?(x)', '!node_modules/**/*.test.js?(x)'],
