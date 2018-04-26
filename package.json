@@ -1,0 +1,103 @@
+{
+    "name": "swica-chatbot",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "axios": "^0.18.0",
+        "i18next": "^10.4.1",
+        "i18next-browser-languagedetector": "^2.1.0",
+        "json-server": "^0.12.1",
+        "lodash": "^4.17.5",
+        "next": "^5.1.0",
+        "polished": "^1.9.2",
+        "prop-types": "^15.6.1",
+        "react": "^16.3.2",
+        "react-dom": "^16.3.2",
+        "react-i18next": "^7.3.6",
+        "recompose": "^0.26.0",
+        "styled-components": "^3.2.3",
+        "styled-tools": "^0.5.0",
+        "typeface-roboto": "^0.0.54",
+        "uuid": "^3.2.1",
+        "xstate": "^3.1.0"
+    },
+    "scripts": {
+        "dev": "next",
+        "build": "next build",
+        "start": "next start",
+        "test": "jest",
+        "test:coverage": "npm test -- --coverage",
+        "test:watch": "npm test -- --watch",
+        "test:coverage:watch": "npm test -- --coverage --watch",
+        "test:reset": "npm test -- --no-cache --coverage",
+        "mock:start": "node ./json-server/server.js",
+        "storybook": "start-storybook -p 9001 -c .storybook"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "**/*.js": [
+            "eslint --fix",
+            "git add"
+        ],
+        "**/*.json": [
+            "prettier --single-quote --write"
+        ]
+    },
+    "devDependencies": {
+        "@storybook/addon-actions": "^3.4.1",
+        "@storybook/addon-options": "^3.4.2",
+        "@storybook/react": "^3.4.1",
+        "babel-core": "^6.26.0",
+        "babel-eslint": "^8.2.2",
+        "babel-jest": "^22.4.3",
+        "babel-plugin-module-resolver": "^3.1.1",
+        "babel-plugin-inline-react-svg": "^0.5.2",
+        "babel-plugin-module-alias": "^1.6.0",
+        "babel-plugin-styled-components": "^1.5.1",
+        "enzyme": "^3.3.0",
+        "enzyme-adapter-react-16": "^1.1.1",
+        "enzyme-to-json": "^3.3.1",
+        "eslint": "^4.18.2",
+        "eslint-config-airbnb": "^16.1.0",
+        "eslint-config-prettier": "^2.9.0",
+        "eslint-config-react-app": "^2.1.0",
+        "eslint-config-skeleton": "^0.1.5",
+        "eslint-import-resolver-babel-module": "^4.0.0",
+        "eslint-plugin-flowtype": "^2.46.1",
+        "eslint-plugin-import": "^2.9.0",
+        "eslint-plugin-jest": "^21.15.0",
+        "eslint-plugin-jsx-a11y": "^6.0.3",
+        "eslint-plugin-prettier": "^2.6.0",
+        "eslint-plugin-react": "^7.7.0",
+        "flow-bin": "^0.67.1",
+        "husky": "^1.0.0-rc.2",
+        "jest-cli": "^22.4.3",
+        "lint-staged": "^7.0.4",
+        "prettier": "^1.11.1",
+        "prettier-eslint": "^8.8.1",
+        "react-addons-test-utils": "^15.6.2",
+        "react-storybook-addon-chapters": "^2.1.3",
+        "regenerator-runtime": "^0.11.1"
+    },
+    "jest": {
+        "collectCoverageFrom": [
+            "./pages/**/*.{js,jsx}",
+            "./materials/**/*.{js,jsx}",
+            "./elements/**/*.{js,jsx}",
+            "./components/**/*.{js,jsx}",
+            "./utils/**/*.{js,jsx}",
+            "./localization/**/*.{js,jsx}",
+            "!**/node_modules/**",
+            "!**/vendor/**"
+        ],
+        "setupTestFrameworkScriptFile": "./jest.setup.js",
+        "testPathIgnorePatterns": [
+            "./.next/",
+            "./node_modules/"
+        ]
+    }
+}

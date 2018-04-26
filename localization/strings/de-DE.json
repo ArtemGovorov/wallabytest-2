@@ -1,0 +1,19 @@
+{
+  "general": {
+    "nav": {
+      "linkDE": "Deutsche",
+      "linkEN": "Englisch"
+    },
+    "chat": {
+      "header": "DE Chat",
+      "placeholder": "Geben Sie die Nachricht ein ..."
+    },
+    "steps": {
+      "your-name": "Wie heißen Sie?",
+      "what-gender": "Hallo {previousValue}! Was ist dein Geschlecht?",
+      "how-old": "Wie alt sind Sie?",
+      "male": "Männlich",
+      "female": "Weiblich"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "general": {
+    "nav": {
+      "linkDE": "German",
+      "linkEN": "English"
+    },
+    "chat": {
+      "header": "DE Chat",
+      "placeholder": "Type the message ..."
+    },
+    "steps": {
+      "your-name": "What is your name?",
+      "what-gender": "Hi {previousValue}! What is your gender?",
+      "how-old": "How old are you?",
+      "male": "Male",
+      "female": "Female"
+    }
+  }
+}
