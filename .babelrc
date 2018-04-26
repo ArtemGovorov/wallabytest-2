@@ -1,0 +1,25 @@
+{
+  "presets": ["next/babel"],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": ["./"],
+        "alias": {
+          "utils": "./utils",
+          "materials": "./materials",
+          "elements": "./elements",
+          "components": "./components",
+          "layouts": "./layouts",
+          "localization": "./localization",
+          "pages": "./pages"
+        }
+      }
+    ]
+  ],
+  "env": {
+    "test": {
+      "presets": [["env"], "next/babel"]
+    }
+  }
+}

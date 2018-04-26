@@ -1,0 +1,28 @@
+{
+    "extends": ["eslint-config-skeleton", "plugin:jest/recommended"],
+    "plugins": ["jest", "react", "flowtype", "import"],
+    "parser": "babel-eslint",
+    "settings": {
+        "import/resolver": {
+            "babel-module": {}
+        }
+    },
+    "rules": {
+        "react/react-in-jsx-scope": 0,
+        "max-statements": 0,
+        "complexity": 0,
+        "react/prefer-stateless-function": 0,
+        "react/no-array-index-key": 0,
+        "no-debugger": 0,
+        "import/no-extraneous-dependencies": [
+            "error",
+            {
+                "devDependencies": [
+                    ".storybook/**",
+                    "**/stories.js",
+                    "**/*test.js?(x)"
+                ]
+            }
+        ]
+    }
+}
